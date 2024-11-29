@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root,
+[data-bs-theme=light] {
+    --bs-primary-rgb: 220, 220, 220; /*? Blanco*/
+    --bs-secondary-rgb: 29, 53, 87; /*? Azul*/
+    --bs-myTertiary-rgb: 118, 200, 147; /*? Verde Menta*/
+    --bs-warnign-rgb: 255, 202, 58; /*? Mostaza*/
+    --bs-ligth-rgb: 168, 218, 220; /*? Celeste*/
+    --bs-danger-subtle-rgb: 220, 20, 60; /*? */
+    --bs-myDanger-subtle: 255, 87, 87; /*? Rojo*/
+}
+
+* {
+    font-family: "Work Sans", sans-serif !important;
+}
+
+header .nav-link:hover {
+    color: rgb(118, 200, 147) !important;
+}
+header .navbar-brand {
+    transition: all .3s ease-in-out;
+}
+
+header .navbar-brand:hover {
+    transform: scale(1.05) !important;
+    transition: all .3s ease-in-out;
+}
+
+
+main .row article.myDanger-subtle {
+    background-color: rgb(255, 87, 87) !important;
+}
+
+
+
+.bg-completed {
+    background-color: rgb(118, 200, 147) !important;
+}
