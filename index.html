@@ -23,10 +23,10 @@
                     <a class="nav-link active text-primary" aria-current="page" href="#">Inicio</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-primary" href="#">Pendientes</a>
+                    <a id="liknPendientes" class="nav-link text-primary" href="/pages/pending.html">Pendientes</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-primary" href="#">Completadas</a>
+                    <a class="nav-link text-primary" href="/pages/completed.html">Completadas</a>
                   </li>
                 </ul>
               </div>
@@ -35,48 +35,81 @@
     </header>
 
     <main class="py-4">
-        <section class="container bg-secondary">
+        <section class="container bg-secondary rounded-3">
             <article class="row py-3">
-                <section class="col-6 px-2">
-                    <div class="row">
+                <section class="col-6 px-4">
+                    <div class="row d-flex gap-1">
                         <section class="col-12">
-                            <h1 id="mensajeBienvenida" class="text-primary">Bienvenido</h1>
+                            <h1 id="mensajeBienvenida" class="text-primary">Tu lista de tareas</h1>
                         </section>
-                        <section class="col-12">
-                            <h3>Organiza tus actividades fácil y sencillo</h3>
+                        <section class="col-8">
+                            <h3 class="myLight fs-4">Organizar tus actividades nunca fué tan fácil y sencillo</h3>
+                        </section>
+                        <section class="col-11">
+                            <video class="w-100 rounded" autoplay muted loop>
+                                <source src="/media/videos/welcome.mp4">
+                            </video>
+                        </section>
+                        <section class="col-12 text-center pt-3">
+                            <button id="listaCompleta" class="btn btn-VerTodo-blanco fw-semibold">Todas las tareas</button>
                         </section>
                     </div>
                 </section>
-                <div class="row justify-content-between col-6 bg-primary py-3 g-3 rounded-2">
-                    <article class="col-12 myDanger-subtle rounded-2">
+                <div class="row justify-content-between col-6 bg-primary py-3 rounded-2">
+                    <article class="col-12 myDanger-subtle rounded-2 mb-3">
+                        <section>
+                            <h4 class="text-center pt-3 pb-2">Pendientes</h4>
+                        </section>
                         <div class="row">
-                            <section class="col-12">
-                                <h2 class="text-center py-2">Pendientes</h2>
-                            </section>
+
                             <section>
-                                <ul id="contenedorCompletadas">
-    
+                                <ul id="contenedorPendientes" class="p-0 list-group-flush d-flex flex-column gap-2">
+                                    
                                 </ul>
+                            </section>
+                            <section class="text-center pb-3"> 
+                                <a href="/pages/pending.html" id="btnVerTodoPendientes" class="btn btn-VerTodo fw-semibold">Ver todo</a>
                             </section>
                         </div>
                     </article>
                     <article class="col-12 bg-completed rounded-2">
                         <div class="row">
                             <section class="col-12">
-                                <h2 class="text-center py-2">Completadas</h2>
+                                <h4 class="text-center pt-3 pb-2">Completadas</h4>
                             </section>
-                            <section>
-                                <ul id="contenedorCompletadas">
-    
+                            <section  class="col-12">
+                                <ul id="contenedorCompletadas" class="p-0 list-group-flush d-flex flex-column gap-2">
+                                    
                                 </ul>
+                            </section>
+                            <section class="text-center pb-3"> 
+                                <a href="/pages/" id="btnVerTodoCompletadas" class="btn btn-VerTodo fw-semibold">Ver Todo</a>
                             </section>
                         </div>
                     </article>
                 </div>
             </article>
         </section>
-    </main>
 
+        <section class="py-4">
+            <h2 class="text-center py-4">LIsta Completa de tareas</h2>
+            <table class="table table-primary container">
+                <thead>
+                    <tr class="text-center fw-semibold text-secondary">
+                        <td>Usuario</td>
+                        <td>Tarea</td>
+                        <td>Id tarea</td>
+                        <td>Completada</td>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="/scripts/conexionAPI.js"></script>
+    <script src="/scripts/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

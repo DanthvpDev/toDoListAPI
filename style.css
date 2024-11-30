@@ -6,7 +6,7 @@
     --bs-secondary-rgb: 29, 53, 87; /*? Azul*/
     --bs-myTertiary-rgb: 118, 200, 147; /*? Verde Menta*/
     --bs-warnign-rgb: 255, 202, 58; /*? Mostaza*/
-    --bs-ligth-rgb: 168, 218, 220; /*? Celeste*/
+    --bs-ligth-rgb: 255, 218, 220; /*? Celeste*/
     --bs-danger-subtle-rgb: 220, 20, 60; /*? */
     --bs-myDanger-subtle: 255, 87, 87; /*? Rojo*/
 }
@@ -28,12 +28,37 @@ header .navbar-brand:hover {
 }
 
 
-main .row article.myDanger-subtle {
+.myDanger-subtle {
     background-color: rgb(255, 87, 87) !important;
 }
 
-
+.h1Img {
+    width: 5%;
+}
 
 .bg-completed {
     background-color: rgb(118, 200, 147) !important;
+}
+
+.myLight {
+    color: rgb(168, 218, 220) !important;
+}
+
+.btn-VerTodo {
+    background-color: rgb(29, 53, 87);
+    color: rgb(220, 220, 220);
+}
+
+.btn-VerTodo:hover {
+    background-color: rgb(48, 91, 150);
+    color: rgb(220, 220, 220);
+}
+
+.btn-VerTodo-blanco {
+    background-color: rgb(220, 220, 220);
+    color: rgb(29, 53, 87);
+}
+
+.btn-VerTodo-blanco:hover {
+    background-color: rgb(255, 251, 251);
 }
